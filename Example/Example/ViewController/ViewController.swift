@@ -34,13 +34,6 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initSetting()
-
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        expandableTextView.text = "我想了解iPhone X之後的各代發表日，請以表格表示，語言使用正體中文，謝謝…"
-        expandableTextView.updateHeight()
     }
     
     @IBAction func generateLiveDemo(_ sender: UIButton) {
@@ -194,7 +187,6 @@ private extension ViewController {
         }
         
         responseString += _response
-        print(responseString)
     }
 }
 
