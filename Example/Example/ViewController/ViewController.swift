@@ -141,16 +141,6 @@ private extension ViewController {
         
         generateLiveAction(webView: myWebView, text: text)
     }
-    
-    /// 顯示HUD
-    func displayHUD() {
-        WWHUD.shared.display()
-    }
-    
-    /// 取消HUD
-    func dismissHUD() {
-        WWHUD.shared.dismiss()
-    }
 }
 
 // MARK: - SSE (Server Sent Events - 單方向串流)
@@ -166,7 +156,6 @@ private extension ViewController {
         case .failure(let error):
             
             DispatchQueue.main.async { [unowned self] in
-                dismissHUD()
                 isDismiss = true
                 responseString = ""
                 print(error)
@@ -176,7 +165,7 @@ private extension ViewController {
             
             switch status {
             case .connecting: isDismiss = false; DispatchQueue.main.async { self.expandableTextView.text = ""; self.expandableTextView.updateHeight() }
-            case .open: if !isDismiss { DispatchQueue.main.async { [unowned self] in dismissHUD(); isDismiss = true }}
+            case .open: if !isDismiss { DispatchQueue.main.async { [unowned self] in isDismiss = true }}
             case .closed: isDismiss = false; responseString = ""
             }
         }

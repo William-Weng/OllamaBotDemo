@@ -16,7 +16,6 @@
 		81472E032D94F0FB000A624F /* WWEventSource in Frameworks */ = {isa = PBXBuildFile; productRef = 81472E022D94F0FB000A624F /* WWEventSource */; };
 		8166C86C2D8BF95400AB785A /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 8166C86B2D8BF95400AB785A /* WWSimpleAI_Ollama */; };
 		8169F6312D94EE8C00133827 /* WWEventSource in Frameworks */ = {isa = PBXBuildFile; productRef = 8169F6302D94EE8C00133827 /* WWEventSource */; };
-		8169F6342D94EEA200133827 /* WWHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8169F6332D94EEA200133827 /* WWHUD */; };
 		816F4D612D87F5FC00AE5E6B /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 816F4D602D87F5FC00AE5E6B /* WWSimpleAI_Ollama */; };
 		816F4D672D88066A00AE5E6B /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 816F4D662D88066A00AE5E6B /* WWSimpleAI_Ollama */; };
 		8170D93F2D93B51B00BD1127 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 8170D93E2D93B51B00BD1127 /* WWSimpleAI_Ollama */; };
@@ -76,7 +75,6 @@
 				81BF3CBE2D8905CA00A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				81472E032D94F0FB000A624F /* WWEventSource in Frameworks */,
 				81BF3CE52D891F1200A11987 /* WWSimpleAI_Ollama in Frameworks */,
-				8169F6342D94EEA200133827 /* WWHUD in Frameworks */,
 				816F4D672D88066A00AE5E6B /* WWSimpleAI_Ollama in Frameworks */,
 				811DB6222D910B030072DB27 /* WWSimpleAI_Ollama in Frameworks */,
 				816F4D612D87F5FC00AE5E6B /* WWSimpleAI_Ollama in Frameworks */,
@@ -221,7 +219,6 @@
 				817279122D93ED410005717F /* WWSimpleAI_Ollama */,
 				817279182D93EF9F0005717F /* WWSimpleAI_Ollama */,
 				8169F6302D94EE8C00133827 /* WWEventSource */,
-				8169F6332D94EEA200133827 /* WWHUD */,
 				81472E022D94F0FB000A624F /* WWEventSource */,
 				817B7E4E2DACA5A3003B1D2C /* WWSimpleAI_Ollama */,
 				81E9F4412DACA7260070F445 /* WWSimpleAI_Ollama */,
@@ -257,7 +254,6 @@
 			);
 			mainGroup = 817567EF2CA2C2B400B24577;
 			packageReferences = (
-				8169F6322D94EEA200133827 /* XCRemoteSwiftPackageReference "WWHUD" */,
 				81472E012D94F0FB000A624F /* XCRemoteSwiftPackageReference "WWEventSource" */,
 				81E9F4402DACA7260070F445 /* XCRemoteSwiftPackageReference "WWSimpleAI_Ollama" */,
 				811B79292DB8C67C00A1958B /* XCRemoteSwiftPackageReference "WWKeyboardShadowView" */,
@@ -455,7 +451,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +484,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,14 +550,6 @@
 				minimumVersion = 1.4.0;
 			};
 		};
-		8169F6322D94EEA200133827 /* XCRemoteSwiftPackageReference "WWHUD" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/William-Weng/WWHUD";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.3;
-			};
-		};
 		81E9F4402DACA7260070F445 /* XCRemoteSwiftPackageReference "WWSimpleAI_Ollama" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWSimpleAI_Ollama";
@@ -611,11 +599,6 @@
 		8169F6302D94EE8C00133827 /* WWEventSource */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WWEventSource;
-		};
-		8169F6332D94EEA200133827 /* WWHUD */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8169F6322D94EEA200133827 /* XCRemoteSwiftPackageReference "WWHUD" */;
-			productName = WWHUD;
 		};
 		816F4D602D87F5FC00AE5E6B /* WWSimpleAI_Ollama */ = {
 			isa = XCSwiftPackageProductDependency;

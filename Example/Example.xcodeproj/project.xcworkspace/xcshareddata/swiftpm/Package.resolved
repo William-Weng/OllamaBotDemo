@@ -1,5 +1,5 @@
 {
-  "originHash" : "5ee4ffb38f3fdac187eb1bbc35571fedc8e34c67eab834709fc0079d23edd63b",
+  "originHash" : "b6f58d0b33b32e72bd98f3e6d5cca8e884be669e4a89cd94668a81c9b77374a3",
   "pins" : [
     {
       "identity" : "wweventsource",
@@ -17,15 +17,6 @@
       "state" : {
         "revision" : "8fb7db74d9b3e5faf9dbb790444dc0f4ba527968",
         "version" : "1.0.3"
-      }
-    },
-    {
-      "identity" : "wwhud",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/William-Weng/WWHUD",
-      "state" : {
-        "revision" : "b8db2cdf70698c073842df293cfe0946ca0690d5",
-        "version" : "1.3.3"
       }
     },
     {
