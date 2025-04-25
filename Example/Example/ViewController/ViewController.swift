@@ -8,7 +8,6 @@
 import UIKit
 import JavaScriptCore
 import WebKit
-import WWHUD
 import WWNetworking
 import WWEventSource
 import WWSimpleAI_Ollama
