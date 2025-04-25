@@ -18,7 +18,6 @@
 |---|---|
 |[WWEventSource](https://github.com/William-Weng/WWEventSource)|1.4.0|
 |[WWExpandableTextView](https://github.com/William-Weng/WWExpandableTextView)|1.0.3|
-|[WWHUD](https://github.com/William-Weng/WWHUD)|1.3.3|
 |[WWKeyboardShadowView](https://github.com/William-Weng/WWKeyboardShadowView)|1.1.0|
 |[WWSimpleAI_Ollama](https://github.com/William-Weng/WWSimpleAI_Ollama)|1.1.7|
 
