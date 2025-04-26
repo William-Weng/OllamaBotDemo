@@ -16,19 +16,19 @@ import WWExpandableTextView
 
 // MARK: - ViewController
 final class ViewController: UIViewController {
-        
+    
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var connentView: UIView!
     @IBOutlet weak var keyboardConstraintHeight: NSLayoutConstraint!
     @IBOutlet weak var keyboardShadowView: WWKeyboardShadowView!
     @IBOutlet weak var expandableTextView: WWExpandableTextView!
     
-    private let urlString = "http://localhost:11434/api/generate"
+    private let apiUrlString = "http://localhost:11434/api/generate"
     private let chatModel = "llama3.2"
     
     private var isDismiss = false
     private var responseString: String = ""
-    private var aiTimestamp: Int?
+    private var botTimestamp: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,7 +122,7 @@ private extension ViewController {
         }
         """
         
-        _ = WWEventSource.shared.connect(httpMethod: .POST, delegate: self, urlString: urlString, httpBodyType: .string(json))
+        _ = WWEventSource.shared.connect(httpMethod: .POST, delegate: self, urlString: apiUrlString, httpBodyType: .string(json))
     }
     
     /// 問問題 (執行SSE串流)
@@ -199,13 +199,13 @@ private extension ViewController {
     func refreashWebSlaveCell(with webView: WKWebView, responseString: String) {
         
         guard let base64Encoded = responseString._base64Encoded(),
-              let aiTimestamp = aiTimestamp
+              let botTimestamp = botTimestamp
         else {
             return
         }
         
         let jsCode = """
-            window.displayMarkdown("\(base64Encoded)", \(aiTimestamp))
+            window.displayMarkdown("\(base64Encoded)", \(botTimestamp))
         """
         
         webView._evaluateJavaScript(script: jsCode) { result in
@@ -227,9 +227,9 @@ private extension ViewController {
             
             self.appendRole(with: webView, role: "bot", message: "") { dict in
                 
-                guard let aiTimestamp = dict["timestamp"] else { return }
+                guard let botTimestamp = dict["timestamp"] else { return }
                 
-                self.aiTimestamp = aiTimestamp
+                self.botTimestamp = botTimestamp
                 self.liveGenerate(prompt: text)
             }
         }
