@@ -41,6 +41,10 @@
 		81E3A78B2DBA06C100CDE86A /* bot.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E3A78A2DBA06C100CDE86A /* bot.png */; };
 		81E3A78F2DBA2BE200CDE86A /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E3A78E2DBA2BE200CDE86A /* user.png */; };
 		81E9F4422DACA7260070F445 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 81E9F4412DACA7260070F445 /* WWSimpleAI_Ollama */; };
+		81F2E3B52DBF135900E89C27 /* WWPrint in Frameworks */ = {isa = PBXBuildFile; productRef = 81F2E3B42DBF135900E89C27 /* WWPrint */; };
+		81F2E3B82DBF213F00E89C27 /* WWToast in Frameworks */ = {isa = PBXBuildFile; productRef = 81F2E3B72DBF213F00E89C27 /* WWToast */; };
+		81F2E3BB2DBF280A00E89C27 /* WWUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 81F2E3BA2DBF280A00E89C27 /* WWUserDefaults */; };
+		81F2E3BD2DBF38AA00E89C27 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2E3BC2DBF38AA00E89C27 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,7 @@
 		81E3A7812DB9CEAA00CDE86A /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		81E3A78A2DBA06C100CDE86A /* bot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bot.png; sourceTree = "<group>"; };
 		81E3A78E2DBA2BE200CDE86A /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		81F2E3BC2DBF38AA00E89C27 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +82,11 @@
 				81BF3CE52D891F1200A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				816F4D672D88066A00AE5E6B /* WWSimpleAI_Ollama in Frameworks */,
 				811DB6222D910B030072DB27 /* WWSimpleAI_Ollama in Frameworks */,
+				81F2E3B82DBF213F00E89C27 /* WWToast in Frameworks */,
 				816F4D612D87F5FC00AE5E6B /* WWSimpleAI_Ollama in Frameworks */,
 				3DDC004F2D8675200059AE06 /* WWSimpleAI_Ollama in Frameworks */,
 				817279132D93ED410005717F /* WWSimpleAI_Ollama in Frameworks */,
+				81F2E3B52DBF135900E89C27 /* WWPrint in Frameworks */,
 				3D5C9BE92D85AF940037E78A /* WWSimpleAI_Ollama in Frameworks */,
 				8166C86C2D8BF95400AB785A /* WWSimpleAI_Ollama in Frameworks */,
 				8194FEC52D87B1E90022F8D1 /* WWSimpleAI_Ollama in Frameworks */,
@@ -87,6 +94,7 @@
 				8170D9452D93E1BC00BD1127 /* WWEventSource in Frameworks */,
 				817B7E4F2DACA5A3003B1D2C /* WWSimpleAI_Ollama in Frameworks */,
 				811DB6282D910E080072DB27 /* WWSimpleAI_Ollama in Frameworks */,
+				81F2E3BB2DBF280A00E89C27 /* WWUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				817568132CA2C33600B24577 /* Extension.swift */,
+				81F2E3BC2DBF38AA00E89C27 /* Constant.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -224,6 +233,9 @@
 				81E9F4412DACA7260070F445 /* WWSimpleAI_Ollama */,
 				811B792A2DB8C67C00A1958B /* WWKeyboardShadowView */,
 				811B792D2DB8C69100A1958B /* WWExpandableTextView */,
+				81F2E3B42DBF135900E89C27 /* WWPrint */,
+				81F2E3B72DBF213F00E89C27 /* WWToast */,
+				81F2E3BA2DBF280A00E89C27 /* WWUserDefaults */,
 			);
 			productName = Example;
 			productReference = 817567F82CA2C2B400B24577 /* Example.app */;
@@ -258,6 +270,9 @@
 				81E9F4402DACA7260070F445 /* XCRemoteSwiftPackageReference "WWSimpleAI_Ollama" */,
 				811B79292DB8C67C00A1958B /* XCRemoteSwiftPackageReference "WWKeyboardShadowView" */,
 				811B792C2DB8C69100A1958B /* XCRemoteSwiftPackageReference "WWExpandableTextView" */,
+				81F2E3B32DBF135900E89C27 /* XCRemoteSwiftPackageReference "WWPrint" */,
+				81F2E3B62DBF213F00E89C27 /* XCRemoteSwiftPackageReference "WWToast" */,
+				81F2E3B92DBF280A00E89C27 /* XCRemoteSwiftPackageReference "WWUserDefaults" */,
 			);
 			productRefGroup = 817567F92CA2C2B400B24577 /* Products */;
 			projectDirPath = "";
@@ -292,6 +307,7 @@
 				817568152CA2C33600B24577 /* Extension.swift in Sources */,
 				817568002CA2C2B400B24577 /* ViewController.swift in Sources */,
 				817567FC2CA2C2B400B24577 /* AppDelegate.swift in Sources */,
+				81F2E3BD2DBF38AA00E89C27 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +574,30 @@
 				minimumVersion = 1.1.6;
 			};
 		};
+		81F2E3B32DBF135900E89C27 /* XCRemoteSwiftPackageReference "WWPrint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/William-Weng/WWPrint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.1;
+			};
+		};
+		81F2E3B62DBF213F00E89C27 /* XCRemoteSwiftPackageReference "WWToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/William-Weng/WWToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+		81F2E3B92DBF280A00E89C27 /* XCRemoteSwiftPackageReference "WWUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/William-Weng/WWUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -664,6 +704,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 81E9F4402DACA7260070F445 /* XCRemoteSwiftPackageReference "WWSimpleAI_Ollama" */;
 			productName = WWSimpleAI_Ollama;
+		};
+		81F2E3B42DBF135900E89C27 /* WWPrint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81F2E3B32DBF135900E89C27 /* XCRemoteSwiftPackageReference "WWPrint" */;
+			productName = WWPrint;
+		};
+		81F2E3B72DBF213F00E89C27 /* WWToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81F2E3B62DBF213F00E89C27 /* XCRemoteSwiftPackageReference "WWToast" */;
+			productName = WWToast;
+		};
+		81F2E3BA2DBF280A00E89C27 /* WWUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81F2E3B92DBF280A00E89C27 /* XCRemoteSwiftPackageReference "WWUserDefaults" */;
+			productName = WWUserDefaults;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

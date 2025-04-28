@@ -107,10 +107,22 @@
                             <constraint firstItem="odF-pP-qVX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uCG-92-A7w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ollama" id="2ao-KS-MP5"/>
+                    <navigationItem key="navigationItem" title="Ollama" id="2ao-KS-MP5">
+                        <barButtonItem key="leftBarButtonItem" image="Settings" style="plain" id="xZH-Np-ZbA">
+                            <connections>
+                                <action selector="configureAction:" destination="BYZ-38-t0r" id="a1M-Gk-caT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Cancel" id="lKr-tk-Gde">
+                            <connections>
+                                <action selector="cancelBotChat:" destination="BYZ-38-t0r" id="jj8-lu-dnt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="connentView" destination="NNs-Dg-GgA" id="yIN-lV-m7a"/>
                         <outlet property="expandableTextView" destination="PWA-KW-C9I" id="WWt-l9-Oln"/>
+                        <outlet property="generateLiveButton" destination="gpd-8a-XMB" id="n3f-OE-rgu"/>
                         <outlet property="keyboardConstraintHeight" destination="5sN-xh-1tj" id="xwr-jv-cRI"/>
                         <outlet property="keyboardShadowView" destination="dL3-DR-hGo" id="JyZ-GX-NuS"/>
                         <outlet property="myWebView" destination="odF-pP-qVX" id="6nO-Ie-6oq"/>
@@ -140,8 +152,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cancel" width="26.666666030883789" height="26.666666030883789"/>
         <image name="Chat" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Desktop" width="341.33334350585938" height="597.33331298828125"/>
+        <image name="Settings" width="26.666666030883789" height="26.666666030883789"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

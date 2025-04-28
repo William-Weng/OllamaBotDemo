@@ -14,9 +14,13 @@
             align-items: center;
         }
 
-        .bot { align-items: flex-start; }
+        .bot {
+            align-items: flex-start;
+        }
 
-        .user { align-items: flex-end; }
+        .user {
+            align-items: flex-end;
+        }
 
         .avatar {
             width: 56px;
@@ -67,7 +71,14 @@
             align-self: flex-end;
         }
 
-        .dots { display: inline-block; }
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .dots {
+            display: inline-block;
+        }
 
         .dot {
             opacity: 0;
@@ -75,15 +86,34 @@
             display: inline-block;
         }
 
-        .dot:nth-child(2) { animation-delay: 0.3s; }
-        .dot:nth-child(3) { animation-delay: 0.6s; }
-        .dot:nth-child(4) { animation-delay: 0.9s; }
-        .dot:nth-child(5) { animation-delay: 1.2s; }
+        .dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .dot:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .dot:nth-child(5) {
+            animation-delay: 1.2s;
+        }
 
         @keyframes typingDot {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
         }
     </style>
 
@@ -144,13 +174,33 @@
             const decodedText = decodeURIComponent(escape(atob(base64Encoded)))
             const html = marked.parse(decodedText)
             const div = document.getElementById(timestamp)
-            
+
             div.innerHTML = html
 
             window.scrollTo({
                 top: document.body.scrollHeight,
                 behavior: 'smooth'
             })
+        }
+
+        /**
+         * 移除最後一個Bot對話框 + 動畫
+         * @returns {bool} 是否成功
+         */
+        window.removeLastBot = () => {
+
+            const elements = document.getElementsByClassName('bot')
+            if (elements.length == 0) { return false }
+
+            const lastElement = elements[elements.length - 1]
+
+            lastElement.classList.add('fade-out');
+
+            lastElement.addEventListener('transitionend', function () {
+                if (lastElement.parentNode) { lastElement.parentNode.removeChild(lastElement) }
+            })
+
+            return true
         }
     </script>
 
