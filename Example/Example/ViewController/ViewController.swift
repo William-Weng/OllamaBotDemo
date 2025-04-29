@@ -88,6 +88,12 @@ extension ViewController: WWEventSource.Delegate {
 extension ViewController: WWKeyboardShadowView.Delegate {
     
     func keyboardViewChange(_ view: WWKeyboardShadowView, status: WWKeyboardShadowView.DisplayStatus, information: WWKeyboardShadowView.KeyboardInformation, height: CGFloat) -> Bool {
+        
+        switch status {
+        case .willShow: scrollToBottom(with: myWebView)
+        case .willHide, .didShow, .didHide: break
+        }
+        
         return true
     }
     
@@ -332,6 +338,23 @@ private extension ViewController {
             }
             
             self.generateLiveButton(isEnabled: true)
+        }
+    }
+    
+    /// 將網頁拉到最底部
+    /// - Parameter webView: WKWebView
+    func scrollToBottom(with webView: WKWebView) {
+        
+        let jsCode = """
+            window.scrollToBottom()
+        """
+        
+        webView._evaluateJavaScript(script: jsCode) { result in
+            
+            switch result {
+            case .failure(let error): wwPrint(error)
+            case .success(let value): wwPrint(value ?? "")
+            }
         }
     }
     

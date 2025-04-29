@@ -176,11 +176,7 @@
             const div = document.getElementById(timestamp)
 
             div.innerHTML = html
-
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-            })
+            window.scrollToBottom()
         }
 
         /**
@@ -202,6 +198,18 @@
 
             return true
         }
+        
+        /**
+         * 滾到最低部
+         */
+        window.scrollToBottom = () => {
+            
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            })
+        }
+        
     </script>
 
     <title>BOT聊天室</title>

@@ -33,7 +33,7 @@ extension String {
     /// - Parameter options: Data.Base64EncodingOptions
     /// - Returns: String?
     func _base64Encoded(options: Data.Base64EncodingOptions = []) -> String? {
-        return data(using: .utf8)?._base64String()
+        return data(using: .utf8)?._base64String(options: options)
     }
     
     /// 將轉成Base64的JSONObject轉回來 - "WzEsMiwzXQ==" => [1, 2, 3]
