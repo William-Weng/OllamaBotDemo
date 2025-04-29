@@ -8,6 +8,19 @@
 import UIKit
 import WebKit
 
+// MARK: - Sequence (function)
+extension Sequence {
+    
+    /// Array => JSON Data => Base64String
+    /// - Parameters:
+    ///   - writingOptions: JSONSerialization.WritingOptions
+    ///   - base64EncodingOptions: Data.Base64EncodingOptions
+    /// - Returns: String?
+    func _base64JSONDataString(writingOptions: JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(), base64EncodingOptions: Data.Base64EncodingOptions = []) -> String? {
+        return _jsonData(options: writingOptions)?._base64String(options: base64EncodingOptions)
+    }
+}
+
 // MARK: - String (function)
 extension String {
     
@@ -21,6 +34,23 @@ extension String {
     /// - Returns: String?
     func _base64Encoded(options: Data.Base64EncodingOptions = []) -> String? {
         return data(using: .utf8)?._base64String()
+    }
+    
+    /// 將轉成Base64的JSONObject轉回來 - "WzEsMiwzXQ==" => [1, 2, 3]
+    /// - Parameters:
+    ///   - encoding: String.Encoding
+    ///   - isLossyConversion: Bool
+    ///   - options: JSONSerialization.ReadingOptions
+    /// - Returns: T?
+    func _base64JSONObjectDecode<T>(using encoding: String.Encoding = .utf8, isLossyConversion: Bool = false, options: JSONSerialization.ReadingOptions = .allowFragments) -> T? {
+        
+        guard let data = _data(using: encoding, isLossyConversion: isLossyConversion),
+              let jsonObject = Data(base64Encoded: data)?._jsonObject(options: options)
+        else {
+            return nil
+        }
+        
+        return jsonObject as? T
     }
 }
 

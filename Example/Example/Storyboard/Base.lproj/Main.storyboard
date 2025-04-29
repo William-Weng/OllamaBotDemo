@@ -113,11 +113,18 @@
                                 <action selector="configureAction:" destination="BYZ-38-t0r" id="a1M-Gk-caT"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="Cancel" id="lKr-tk-Gde">
-                            <connections>
-                                <action selector="cancelBotChat:" destination="BYZ-38-t0r" id="jj8-lu-dnt"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="Cancel" id="lKr-tk-Gde">
+                                <connections>
+                                    <action selector="cancelBotChat:" destination="BYZ-38-t0r" id="jj8-lu-dnt"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="Forget" id="02y-KY-HGT">
+                                <connections>
+                                    <action selector="forgetMemory:" destination="BYZ-38-t0r" id="jmB-l7-Fu7"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="connentView" destination="NNs-Dg-GgA" id="yIN-lV-m7a"/>
@@ -155,6 +162,7 @@
         <image name="Cancel" width="26.666666030883789" height="26.666666030883789"/>
         <image name="Chat" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Desktop" width="341.33334350585938" height="597.33331298828125"/>
+        <image name="Forget" width="26.666666030883789" height="26.666666030883789"/>
         <image name="Settings" width="26.666666030883789" height="26.666666030883789"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

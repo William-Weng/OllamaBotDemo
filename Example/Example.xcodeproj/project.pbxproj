@@ -13,6 +13,8 @@
 		811B792E2DB8C69100A1958B /* WWExpandableTextView in Frameworks */ = {isa = PBXBuildFile; productRef = 811B792D2DB8C69100A1958B /* WWExpandableTextView */; };
 		811DB6222D910B030072DB27 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 811DB6212D910B030072DB27 /* WWSimpleAI_Ollama */; };
 		811DB6282D910E080072DB27 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 811DB6272D910E080072DB27 /* WWSimpleAI_Ollama */; };
+		8139CE142DC0769700805A2F /* WWHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8139CE132DC0769700805A2F /* WWHUD */; };
+		8139CE182DC07A2500805A2F /* Forgot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8139CE172DC07A2500805A2F /* Forgot.gif */; };
 		81472E032D94F0FB000A624F /* WWEventSource in Frameworks */ = {isa = PBXBuildFile; productRef = 81472E022D94F0FB000A624F /* WWEventSource */; };
 		8166C86C2D8BF95400AB785A /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 8166C86B2D8BF95400AB785A /* WWSimpleAI_Ollama */; };
 		8169F6312D94EE8C00133827 /* WWEventSource in Frameworks */ = {isa = PBXBuildFile; productRef = 8169F6302D94EE8C00133827 /* WWEventSource */; };
@@ -48,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8139CE172DC07A2500805A2F /* Forgot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Forgot.gif; sourceTree = "<group>"; };
 		817567F82CA2C2B400B24577 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		817567FB2CA2C2B400B24577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		817567FF2CA2C2B400B24577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 				81BF3CC42D89191500A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				81BF3CEB2D894BC800A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				81BF3CFB2D89638300A11987 /* WWEventSource in Frameworks */,
+				8139CE142DC0769700805A2F /* WWHUD in Frameworks */,
 				811B792B2DB8C67C00A1958B /* WWKeyboardShadowView in Frameworks */,
 				81BF3CBE2D8905CA00A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				81472E032D94F0FB000A624F /* WWEventSource in Frameworks */,
@@ -162,6 +166,7 @@
 			children = (
 				81E3A7852DB9CEB500CDE86A /* HTML */,
 				817568042CA2C2B500B24577 /* Assets.xcassets */,
+				8139CE172DC07A2500805A2F /* Forgot.gif */,
 			);
 			path = Material;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				81F2E3B42DBF135900E89C27 /* WWPrint */,
 				81F2E3B72DBF213F00E89C27 /* WWToast */,
 				81F2E3BA2DBF280A00E89C27 /* WWUserDefaults */,
+				8139CE132DC0769700805A2F /* WWHUD */,
 			);
 			productName = Example;
 			productReference = 817567F82CA2C2B400B24577 /* Example.app */;
@@ -273,6 +279,7 @@
 				81F2E3B32DBF135900E89C27 /* XCRemoteSwiftPackageReference "WWPrint" */,
 				81F2E3B62DBF213F00E89C27 /* XCRemoteSwiftPackageReference "WWToast" */,
 				81F2E3B92DBF280A00E89C27 /* XCRemoteSwiftPackageReference "WWUserDefaults" */,
+				8139CE122DC0769700805A2F /* XCRemoteSwiftPackageReference "WWHUD" */,
 			);
 			productRefGroup = 817567F92CA2C2B400B24577 /* Products */;
 			projectDirPath = "";
@@ -288,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8139CE182DC07A2500805A2F /* Forgot.gif in Resources */,
 				817568082CA2C2B500B24577 /* LaunchScreen.storyboard in Resources */,
 				81E3A7822DB9CEAA00CDE86A /* index.html in Resources */,
 				81E3A78F2DBA2BE200CDE86A /* user.png in Resources */,
@@ -465,7 +473,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -498,7 +506,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,6 +564,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.3;
+			};
+		};
+		8139CE122DC0769700805A2F /* XCRemoteSwiftPackageReference "WWHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/William-Weng/WWHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.3;
 			};
 		};
 		81472E012D94F0FB000A624F /* XCRemoteSwiftPackageReference "WWEventSource" */ = {
@@ -626,6 +642,11 @@
 		811DB6272D910E080072DB27 /* WWSimpleAI_Ollama */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WWSimpleAI_Ollama;
+		};
+		8139CE132DC0769700805A2F /* WWHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8139CE122DC0769700805A2F /* XCRemoteSwiftPackageReference "WWHUD" */;
+			productName = WWHUD;
 		};
 		81472E022D94F0FB000A624F /* WWEventSource */ = {
 			isa = XCSwiftPackageProductDependency;

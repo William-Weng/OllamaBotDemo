@@ -8,6 +8,7 @@
 import UIKit
 import JavaScriptCore
 import WebKit
+import WWHUD
 import WWPrint
 import WWToast
 import WWNetworking
@@ -30,11 +31,11 @@ final class ViewController: UIViewController {
     @WWUserDefaults("IP") private var ip: String?
     @WWUserDefaults("Port") private var port: String?
     @WWUserDefaults("ChatModel") private var chatModel: String?
-    
+    @WWUserDefaults("LastContext") private var lastContext: String?
+
     private var botTimestamp: Int?
     private var responseString: String = ""
-    private var lastContext: [Int]?
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initSetting()
@@ -56,6 +57,10 @@ final class ViewController: UIViewController {
     @IBAction func cancelBotChat(_ sender: UIBarButtonItem) {
         WWEventSource.shared.disconnect()
         removeLastBot(with: myWebView)
+    }
+    
+    @IBAction func forgetMemory(_ sender: UIBarButtonItem) {
+        forgetMemoryAction()
     }
 }
 
@@ -151,15 +156,18 @@ private extension ViewController {
         guard let chatModel else { return }
         
         let urlString = WWSimpleAI.Ollama.API.generate.url()
+        let context = lastContext?._base64JSONObjectDecode() as [Int]?
         
         let json = """
         {
           "model": "\(chatModel)",
           "prompt": "\(prompt)",
-          "context": \(lastContext ?? []),
+          "context": \(context ?? []),
           "stream": true
         }
         """
+        
+        wwPrint(json)
         
         _ = WWEventSource.shared.connect(httpMethod: .POST, delegate: self, urlString: urlString, httpBodyType: .string(json))
     }
@@ -213,7 +221,7 @@ private extension ViewController {
     func sseRawString(eventSource: WWEventSource, rawInformation: WWEventSource.RawInformation) {
         
         defer {
-            DispatchQueue.main.async { [unowned self] in refreashWebSlaveCell(with: myWebView, responseString: responseString) }
+            DispatchQueue.main.async { [unowned self] in refreashWebSlaveCell(with: myWebView, botTimestamp: botTimestamp, responseString: responseString) }
         }
         
         if rawInformation.response.statusCode != 200 {
@@ -229,7 +237,10 @@ private extension ViewController {
         
         responseString += response
         
-        if isDone { lastContext = jsonObject["context"] as? [Int] }
+        if isDone {
+            let context = jsonObject["context"] as? [Int]
+            lastContext = context?._base64JSONDataString()
+        }
     }
 }
 
@@ -239,8 +250,9 @@ private extension ViewController {
     /// 顯示Markdown文字
     /// - Parameters:
     ///   - webView: WKWebView
+    ///   - botTimestamp: TimeInterval?
     ///   - responseString: String
-    func refreashWebSlaveCell(with webView: WKWebView, responseString: String) {
+    func refreashWebSlaveCell(with webView: WKWebView, botTimestamp: Int?, responseString: String) {
         
         guard let base64Encoded = responseString._base64Encoded(),
               let botTimestamp = botTimestamp
@@ -321,6 +333,15 @@ private extension ViewController {
             
             self.generateLiveButton(isEnabled: true)
         }
+    }
+    
+    /// [把Bot的記憶清除](https://tenor.com/view/downcast-face-phew-asking-embarrassed-where-gif-6508259955425936045)
+    func forgetMemoryAction() {
+        
+        guard let gifUrl = Bundle.main.url(forResource: "Forgot", withExtension: ".gif") else { return }
+        
+        WWHUD.shared.flash(effect: .gif(url: gifUrl, options: nil), height: 312.0, backgroundColor: .black.withAlphaComponent(0.3), animation: 1.0)
+        lastContext = nil
     }
     
     /// 顯示Ollama參數設定的UIAlertController
