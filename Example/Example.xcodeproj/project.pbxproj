@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2825E52DC284F000A3A420 /* bruno.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D2825E42DC284F000A3A420 /* bruno.json */; };
+		3D2825E72DC284F600A3A420 /* docker-compose.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3D2825E62DC284F600A3A420 /* docker-compose.yml */; };
 		3D5C9BE92D85AF940037E78A /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5C9BE82D85AF940037E78A /* WWSimpleAI_Ollama */; };
 		3DDC004F2D8675200059AE06 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 3DDC004E2D8675200059AE06 /* WWSimpleAI_Ollama */; };
 		811B792E2DB8C69100A1958B /* WWExpandableTextView in Frameworks */ = {isa = PBXBuildFile; productRef = 811B792D2DB8C69100A1958B /* WWExpandableTextView */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2825E42DC284F000A3A420 /* bruno.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bruno.json; sourceTree = "<group>"; };
+		3D2825E62DC284F600A3A420 /* docker-compose.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "docker-compose.yml"; sourceTree = "<group>"; };
 		8139CE172DC07A2500805A2F /* Forgot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Forgot.gif; sourceTree = "<group>"; };
 		817567F82CA2C2B400B24577 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		817567FB2CA2C2B400B24577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2825E32DC284E700A3A420 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				3D2825E42DC284F000A3A420 /* bruno.json */,
+				3D2825E62DC284F600A3A420 /* docker-compose.yml */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
 		817567EF2CA2C2B400B24577 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +179,7 @@
 		817568182CA2C36400B24577 /* Material */ = {
 			isa = PBXGroup;
 			children = (
+				3D2825E32DC284E700A3A420 /* File */,
 				81E3A7852DB9CEB500CDE86A /* HTML */,
 				817568042CA2C2B500B24577 /* Assets.xcassets */,
 				8139CE172DC07A2500805A2F /* Forgot.gif */,
@@ -299,7 +313,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8139CE182DC07A2500805A2F /* Forgot.gif in Resources */,
+				3D2825E52DC284F000A3A420 /* bruno.json in Resources */,
 				817568082CA2C2B500B24577 /* LaunchScreen.storyboard in Resources */,
+				3D2825E72DC284F600A3A420 /* docker-compose.yml in Resources */,
 				81E3A7822DB9CEAA00CDE86A /* index.html in Resources */,
 				81E3A78F2DBA2BE200CDE86A /* user.png in Resources */,
 				817568052CA2C2B500B24577 /* Assets.xcassets in Resources */,

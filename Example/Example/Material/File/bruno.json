@@ -1,0 +1,312 @@
+{
+  "name": "Ollama",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "一次性回應",
+      "filename": "一次性回應.bru",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:11434/api/generate",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"model\": \"qwen3:0.6b\",\n  \"prompt\": \"How is the weather today?\",\n  \"stream\": false\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "下載模型",
+      "filename": "下載模型.bru",
+      "seq": 10,
+      "request": {
+        "url": "http://localhost:11434/api/pull",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"model\": \"qwen3:0.6b\",\n  \"insecure\": true,\n  \"stream\": true\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "刪除模型",
+      "filename": "刪除模型.bru",
+      "seq": 11,
+      "request": {
+        "url": "http://qwen3:0.6b:11434/api/delete",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"model\": \"qwen3:0.6b\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "取得正在執行的模型列表",
+      "filename": "取得正在執行的模型列表.bru",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:11434/api/ps",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "建立新模型",
+      "filename": "建立新模型.bru",
+      "seq": 7,
+      "request": {
+        "url": "http://localhost:11434/api/create",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"model\": \"mario\",\n  \"from\": \"llama3.2\",\n  \"system\": \"You are Mario from Super Mario Bros.\",\n  \"stream\": false\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "模型列表",
+      "filename": "模型列表.bru",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:11434/api/tags",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "當前版本",
+      "filename": "當前版本.bru",
+      "seq": 1,
+      "request": {
+        "url": "http://localhost:11434/api/version",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "聊天對談",
+      "filename": "聊天對談.bru",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:11434/api/chat",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"model\": \"qwen3:0.6b\",\n  \"messages\": [\n    { \"role\": \"user\", \"content\": \"請做一首有關下雨天的五言絕句…\" }\n  ],\n  \"stream\": false\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "複製模型",
+      "filename": "複製模型.bru",
+      "seq": 9,
+      "request": {
+        "url": "http://localhost:11434/api/copy",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"source\": \"llama3.2\",\n  \"destination\": \"llama3.2-backup\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "載入模型",
+      "filename": "載入模型.bru",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:11434/api/generate",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"model\": \"qwen3:0.6b\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "顯示模型資訊",
+      "filename": "顯示模型資訊.bru",
+      "seq": 8,
+      "request": {
+        "url": "http://localhost:11434/api/show",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"model\": \"qwen3:0.6b\",\n  \"verbose\": true\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Ollama",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0022554397583007812,
+    "filesCount": 12
+  }
+}
