@@ -1,5 +1,5 @@
 {
-  "originHash" : "0188232f04148363d6c818324697529d353a38427f1ee671a8a72b93db817897",
+  "originHash" : "afefb99feb3b5485008f7789140d0517a1a7b422551c30c52f09fb1bade05d38",
   "pins" : [
     {
       "identity" : "wweventsource",
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWKeyboardShadowView",
       "state" : {
-        "revision" : "3ca6e8206dc9cc470a8147f4114b0789c08b4d6b",
-        "version" : "1.1.0"
+        "revision" : "3fee0dfdaae1be49d694c8390598be49a588b27c",
+        "version" : "1.1.3"
       }
     },
     {

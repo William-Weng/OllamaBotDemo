@@ -22,7 +22,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-DR-hGo" customClass="WWKeyboardShadowView" customModule="WWKeyboardShadowView">
                                 <rect key="frame" x="0.0" y="860" width="414" height="36"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.50377690397350994" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="5sN-xh-1tj"/>
                                 </constraints>

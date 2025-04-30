@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		3D5C9BE92D85AF940037E78A /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5C9BE82D85AF940037E78A /* WWSimpleAI_Ollama */; };
 		3DDC004F2D8675200059AE06 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 3DDC004E2D8675200059AE06 /* WWSimpleAI_Ollama */; };
-		811B792B2DB8C67C00A1958B /* WWKeyboardShadowView in Frameworks */ = {isa = PBXBuildFile; productRef = 811B792A2DB8C67C00A1958B /* WWKeyboardShadowView */; };
 		811B792E2DB8C69100A1958B /* WWExpandableTextView in Frameworks */ = {isa = PBXBuildFile; productRef = 811B792D2DB8C69100A1958B /* WWExpandableTextView */; };
 		811DB6222D910B030072DB27 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 811DB6212D910B030072DB27 /* WWSimpleAI_Ollama */; };
 		811DB6282D910E080072DB27 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 811DB6272D910E080072DB27 /* WWSimpleAI_Ollama */; };
 		8139CE142DC0769700805A2F /* WWHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8139CE132DC0769700805A2F /* WWHUD */; };
 		8139CE182DC07A2500805A2F /* Forgot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8139CE172DC07A2500805A2F /* Forgot.gif */; };
 		81472E032D94F0FB000A624F /* WWEventSource in Frameworks */ = {isa = PBXBuildFile; productRef = 81472E022D94F0FB000A624F /* WWEventSource */; };
+		8159F7042DC1C0B30033936B /* WWKeyboardShadowView in Frameworks */ = {isa = PBXBuildFile; productRef = 8159F7032DC1C0B30033936B /* WWKeyboardShadowView */; };
 		8166C86C2D8BF95400AB785A /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 8166C86B2D8BF95400AB785A /* WWSimpleAI_Ollama */; };
 		8169F6312D94EE8C00133827 /* WWEventSource in Frameworks */ = {isa = PBXBuildFile; productRef = 8169F6302D94EE8C00133827 /* WWEventSource */; };
+		816C4B7C2DC1B1EB001D0796 /* WWKeyboardShadowView in Frameworks */ = {isa = PBXBuildFile; productRef = 816C4B7B2DC1B1EB001D0796 /* WWKeyboardShadowView */; };
 		816F4D612D87F5FC00AE5E6B /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 816F4D602D87F5FC00AE5E6B /* WWSimpleAI_Ollama */; };
 		816F4D672D88066A00AE5E6B /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 816F4D662D88066A00AE5E6B /* WWSimpleAI_Ollama */; };
 		8170D93F2D93B51B00BD1127 /* WWSimpleAI_Ollama in Frameworks */ = {isa = PBXBuildFile; productRef = 8170D93E2D93B51B00BD1127 /* WWSimpleAI_Ollama */; };
@@ -74,13 +75,13 @@
 				817279192D93EF9F0005717F /* WWSimpleAI_Ollama in Frameworks */,
 				8170D93F2D93B51B00BD1127 /* WWSimpleAI_Ollama in Frameworks */,
 				81BF3D0A2D8972C100A11987 /* WWSimpleAI_Ollama in Frameworks */,
+				816C4B7C2DC1B1EB001D0796 /* WWKeyboardShadowView in Frameworks */,
 				811B792E2DB8C69100A1958B /* WWExpandableTextView in Frameworks */,
 				81BF3D042D896E0700A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				81BF3CC42D89191500A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				81BF3CEB2D894BC800A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				81BF3CFB2D89638300A11987 /* WWEventSource in Frameworks */,
 				8139CE142DC0769700805A2F /* WWHUD in Frameworks */,
-				811B792B2DB8C67C00A1958B /* WWKeyboardShadowView in Frameworks */,
 				81BF3CBE2D8905CA00A11987 /* WWSimpleAI_Ollama in Frameworks */,
 				81472E032D94F0FB000A624F /* WWEventSource in Frameworks */,
 				81BF3CE52D891F1200A11987 /* WWSimpleAI_Ollama in Frameworks */,
@@ -90,6 +91,7 @@
 				816F4D612D87F5FC00AE5E6B /* WWSimpleAI_Ollama in Frameworks */,
 				3DDC004F2D8675200059AE06 /* WWSimpleAI_Ollama in Frameworks */,
 				817279132D93ED410005717F /* WWSimpleAI_Ollama in Frameworks */,
+				8159F7042DC1C0B30033936B /* WWKeyboardShadowView in Frameworks */,
 				81F2E3B52DBF135900E89C27 /* WWPrint in Frameworks */,
 				3D5C9BE92D85AF940037E78A /* WWSimpleAI_Ollama in Frameworks */,
 				8166C86C2D8BF95400AB785A /* WWSimpleAI_Ollama in Frameworks */,
@@ -236,12 +238,13 @@
 				81472E022D94F0FB000A624F /* WWEventSource */,
 				817B7E4E2DACA5A3003B1D2C /* WWSimpleAI_Ollama */,
 				81E9F4412DACA7260070F445 /* WWSimpleAI_Ollama */,
-				811B792A2DB8C67C00A1958B /* WWKeyboardShadowView */,
 				811B792D2DB8C69100A1958B /* WWExpandableTextView */,
 				81F2E3B42DBF135900E89C27 /* WWPrint */,
 				81F2E3B72DBF213F00E89C27 /* WWToast */,
 				81F2E3BA2DBF280A00E89C27 /* WWUserDefaults */,
 				8139CE132DC0769700805A2F /* WWHUD */,
+				816C4B7B2DC1B1EB001D0796 /* WWKeyboardShadowView */,
+				8159F7032DC1C0B30033936B /* WWKeyboardShadowView */,
 			);
 			productName = Example;
 			productReference = 817567F82CA2C2B400B24577 /* Example.app */;
@@ -274,12 +277,12 @@
 			packageReferences = (
 				81472E012D94F0FB000A624F /* XCRemoteSwiftPackageReference "WWEventSource" */,
 				81E9F4402DACA7260070F445 /* XCRemoteSwiftPackageReference "WWSimpleAI_Ollama" */,
-				811B79292DB8C67C00A1958B /* XCRemoteSwiftPackageReference "WWKeyboardShadowView" */,
 				811B792C2DB8C69100A1958B /* XCRemoteSwiftPackageReference "WWExpandableTextView" */,
 				81F2E3B32DBF135900E89C27 /* XCRemoteSwiftPackageReference "WWPrint" */,
 				81F2E3B62DBF213F00E89C27 /* XCRemoteSwiftPackageReference "WWToast" */,
 				81F2E3B92DBF280A00E89C27 /* XCRemoteSwiftPackageReference "WWUserDefaults" */,
 				8139CE122DC0769700805A2F /* XCRemoteSwiftPackageReference "WWHUD" */,
+				8159F7022DC1C0B30033936B /* XCRemoteSwiftPackageReference "WWKeyboardShadowView" */,
 			);
 			productRefGroup = 817567F92CA2C2B400B24577 /* Products */;
 			projectDirPath = "";
@@ -550,14 +553,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		811B79292DB8C67C00A1958B /* XCRemoteSwiftPackageReference "WWKeyboardShadowView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/William-Weng/WWKeyboardShadowView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
-			};
-		};
 		811B792C2DB8C69100A1958B /* XCRemoteSwiftPackageReference "WWExpandableTextView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWExpandableTextView";
@@ -580,6 +575,14 @@
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 1.4.0;
+			};
+		};
+		8159F7022DC1C0B30033936B /* XCRemoteSwiftPackageReference "WWKeyboardShadowView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/William-Weng/WWKeyboardShadowView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.3;
 			};
 		};
 		81E9F4402DACA7260070F445 /* XCRemoteSwiftPackageReference "WWSimpleAI_Ollama" */ = {
@@ -625,11 +628,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WWSimpleAI_Ollama;
 		};
-		811B792A2DB8C67C00A1958B /* WWKeyboardShadowView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 811B79292DB8C67C00A1958B /* XCRemoteSwiftPackageReference "WWKeyboardShadowView" */;
-			productName = WWKeyboardShadowView;
-		};
 		811B792D2DB8C69100A1958B /* WWExpandableTextView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 811B792C2DB8C69100A1958B /* XCRemoteSwiftPackageReference "WWExpandableTextView" */;
@@ -653,6 +651,11 @@
 			package = 81472E012D94F0FB000A624F /* XCRemoteSwiftPackageReference "WWEventSource" */;
 			productName = WWEventSource;
 		};
+		8159F7032DC1C0B30033936B /* WWKeyboardShadowView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8159F7022DC1C0B30033936B /* XCRemoteSwiftPackageReference "WWKeyboardShadowView" */;
+			productName = WWKeyboardShadowView;
+		};
 		8166C86B2D8BF95400AB785A /* WWSimpleAI_Ollama */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WWSimpleAI_Ollama;
@@ -660,6 +663,10 @@
 		8169F6302D94EE8C00133827 /* WWEventSource */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WWEventSource;
+		};
+		816C4B7B2DC1B1EB001D0796 /* WWKeyboardShadowView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WWKeyboardShadowView;
 		};
 		816F4D602D87F5FC00AE5E6B /* WWSimpleAI_Ollama */ = {
 			isa = XCSwiftPackageProductDependency;

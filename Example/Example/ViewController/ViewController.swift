@@ -43,6 +43,7 @@ final class ViewController: UIViewController {
     
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
+        initKeyboardShadowViewSetting()
         configure(ip: ip, port: port, model: chatModel)
     }
     
@@ -107,14 +108,13 @@ private extension ViewController {
     
     /// 初始化設定
     func initSetting() {
-        initKeyboardShadowViewSetting()
         initExpandableTextViewSetting()
         initWebView(filename: "index.html")
     }
     
     /// 初始化鍵盤高度設定
     func initKeyboardShadowViewSetting() {
-        keyboardConstraintHeight.constant = 0
+        keyboardConstraintHeight.constant = view.safeAreaInsets.bottom
         keyboardShadowView.configure(target: self, keyboardConstraintHeight: keyboardConstraintHeight)
         keyboardShadowView.register()
     }
